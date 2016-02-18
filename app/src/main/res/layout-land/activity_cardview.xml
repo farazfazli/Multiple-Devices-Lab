@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
     <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_margin="20dp">
+        android:layout_width="wrap_content"
+        android:id="@+id/cardView"
+        android:layout_height="150dp"
+        android:minWidth="200dp"
+        android:layout_alignParentLeft="true"
+android:layout_centerVertical="true"
+        android:layout_margin="40dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="top|center"
-            android:paddingTop="20dp"
+            android:gravity="center|center"
+            android:id="@+id/textView"
+            android:paddingBottom="30dp"
             android:textColor="@android:color/black"
             android:textSize="30dp"
             android:text="Title"/>
@@ -21,8 +26,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="bottom|center"
-            android:paddingBottom="20dp"
+            android:gravity="center|center"
+            android:paddingTop="30dp"
             android:textSize="20dp"
             android:text="Subtitle"/>
 
@@ -32,6 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/listView2"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_gravity="center_horizontal"
+        android:layout_toRightOf="@+id/cardView"/>
 
-</LinearLayout>
+</RelativeLayout>
